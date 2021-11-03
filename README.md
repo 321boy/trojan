@@ -27,15 +27,15 @@ trojan多用户管理部署程序
 ```
 #安装/更新
 source <(curl -sL https://git.io/trojan-install)
-source <(curl -sL https://raw.githubusercontent.com/Jrohy/trojan/master/install.sh)
+source <(curl -sL https://raw.githubusercontent.com/321boy/trojan/master/install.sh)
 
 #卸载
 source <(curl -sL https://git.io/trojan-install) --remove
-source <(curl -sL https://raw.githubusercontent.com/Jrohy/trojan/master/install.sh) --remove
+source <(curl -sL https://raw.githubusercontent.com/321boy/trojan/master/install.sh) --remove
 ```
 安装完后输入'trojan'可进入管理程序   
 浏览器访问 https://域名 可在线web页面管理trojan用户  
-前端页面源码地址: [trojan-web](https://github.com/Jrohy/trojan-web)
+前端页面源码地址: [trojan-web](https://github.com/321boy/trojan-web)
 
 ### b. docker运行
 1. 安装mysql  
@@ -48,7 +48,7 @@ docker run --name trojan-mariadb --restart=always -p 3306:3306 -v /home/mariadb:
 
 2. 安装trojan
 ```
-docker run -it -d --name trojan --net=host --restart=always --privileged jrohy/trojan init
+docker run -it -d --name trojan --net=host --restart=always --privileged 321boy/trojan init
 ```
 运行完后进入容器 `docker exec -it trojan bash`, 然后输入'trojan'即可进行初始化安装   
 
